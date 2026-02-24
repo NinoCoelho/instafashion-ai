@@ -8,7 +8,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <span className="text-2xl">📸</span>
-            <span className="text-xl font-bold" style={{background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+            <span className="text-xl font-bold text-instagram-gradient">
               InstaFashion AI
             </span>
           </div>
@@ -27,8 +27,7 @@ export default function Home() {
             </Link>
             <Link
               href="/app"
-              className="text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition"
-              style={{background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'}}
+              className="btn-instagram px-6 py-2 rounded-lg font-semibold transition"
             >
               Começar Grátis
             </Link>
@@ -41,7 +40,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Seu Instagram Automaticamente,
-            <span className="block mt-2" style={{background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+            <span className="block mt-2 text-instagram-gradient">
               Com IA
             </span>
           </h1>
@@ -52,8 +51,7 @@ export default function Home() {
           <div className="flex justify-center gap-4 flex-wrap">
             <Link
               href="/app/onboarding"
-              className="text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition shadow-lg"
-              style={{background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'}}
+              className="btn-instagram px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"
             >
               Começar Agora - Teste Grátis
             </Link>
@@ -186,7 +184,7 @@ export default function Home() {
             </div>
 
             {/* Pro */}
-            <div className="p-8 rounded-2xl text-white shadow-lg transform md:scale-105" style={{background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'}}>
+            <div className="p-8 rounded-2xl shadow-lg transform md:scale-105 bg-instagram-gradient text-white">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-xl font-bold">Pro</h3>
                 <span className="bg-white text-pink-600 text-xs px-2 py-1 rounded">
@@ -261,8 +259,8 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 text-white" style={{background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'}}>
-        <div className="max-w-3xl mx-auto text-center text-white">
+      <section className="py-20 px-4 bg-instagram-gradient text-white">
+        <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">
             Pronta para Economizar 10h/Semana?
           </h2>
