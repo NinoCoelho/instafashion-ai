@@ -2,32 +2,28 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="min-h-screen" style={{background: 'linear-gradient(to bottom right, #fdf2f8, #fff7ed)'}}>
+    <main className="min-h-screen bg-white">
       {/* Header */}
-      <nav className="bg-white border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <span className="text-2xl">📸</span>
-            <span className="text-xl font-bold text-instagram-gradient">
-              InstaFashion AI
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 via-orange-500 to-purple-600 flex items-center justify-center">
+              <span className="text-white text-xl">✨</span>
+            </div>
+            <span className="text-xl font-bold text-gray-900">
+              InstaFashion
             </span>
           </div>
-          <div className="flex items-center space-x-4">
-            <Link
-              href="#features"
-              className="text-gray-600 hover:text-pink-600 transition"
-            >
-              Features
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="#features" className="text-gray-600 hover:text-gray-900 transition font-medium">
+              Recursos
             </Link>
-            <Link
-              href="#pricing"
-              className="text-gray-600 hover:text-pink-600 transition"
-            >
+            <Link href="#pricing" className="text-gray-600 hover:text-gray-900 transition font-medium">
               Preços
             </Link>
             <Link
-              href="/app"
-              className="btn-instagram px-6 py-2 rounded-lg font-semibold transition"
+              href="/app/onboarding"
+              className="bg-gradient-to-r from-pink-500 via-orange-500 to-purple-600 text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:shadow-pink-500/25 transition-all"
             >
               Começar Grátis
             </Link>
@@ -36,197 +32,267 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Seu Instagram Automaticamente,
-            <span className="block mt-2 text-instagram-gradient">
-              Com IA
+      <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-pink-50 via-white to-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="inline-flex items-center px-4 py-2 bg-pink-100 rounded-full mb-8">
+            <span className="text-2xl mr-2">🎨</span>
+            <span className="text-pink-700 font-medium text-sm">Para Personal Shoppers Brasileiras</span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            Seu Instagram
+            <br />
+            <span className="bg-gradient-to-r from-pink-500 via-orange-500 to-purple-600 bg-clip-text text-transparent">
+              no Autopilot
             </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Economize 10h/semana criando conteúdo. Personal shoppers: gerencie posts,
-            agende automaticamente, e cresça seus seguidores com calendário inteligente + IA.
+
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Economize 10+ horas por semana criando conteúdo. IA gera posts, calendário inteligente agenda tudo, e você cresce enquanto dorme.
           </p>
-          <div className="flex justify-center gap-4 flex-wrap">
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/app/onboarding"
-              className="btn-instagram px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"
+              className="group bg-gradient-to-r from-pink-500 via-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-pink-500/25 transition-all flex items-center justify-center"
             >
-              Começar Agora - Teste Grátis
+              Começar Agora
+              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </Link>
             <Link
               href="#demo"
-              className="bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-pink-500 hover:bg-pink-50 transition"
+              className="bg-white text-gray-700 px-8 py-4 rounded-full font-semibold text-lg border-2 border-gray-200 hover:border-gray-300 transition-all"
             >
               Ver Demo
             </Link>
+          </div>
+
+          {/* Social Proof */}
+          <div className="mt-16 flex flex-col items-center">
+            <p className="text-gray-500 text-sm mb-4">Usado por personal shoppers em</p>
+            <div className="flex items-center space-x-8 text-gray-400">
+              <span className="text-2xl font-bold">São Paulo</span>
+              <span className="text-2xl">•</span>
+              <span className="text-2xl font-bold">Rio de Janeiro</span>
+              <span className="text-2xl">•</span>
+              <span className="text-2xl font-bold">Belo Horizonte</span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Problem Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            O Problema das Personal Shoppers
-          </h2>
+      <section className="py-24 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              O Problema Real
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Personal shoppers perdem tempo precioso criando conteúdo manualmente
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-xl bg-red-50 border-2 border-red-200">
-              <div className="text-4xl mb-4">⏰</div>
-              <h3 className="text-xl font-semibold mb-2">Tempo Extensivo</h3>
-              <p className="text-gray-600">
-                5-10h/semana criando conteúdo = tempo que poderia atender clientes
-              </p>
-            </div>
-            <div className="p-6 rounded-xl bg-red-50 border-2 border-red-200">
-              <div className="text-4xl mb-4">😰</div>
-              <h3 className="text-xl font-semibold mb-2">Inconsistência</h3>
-              <p className="text-gray-600">
-                Algoritmo pune contas irregulares → perde seguidores e clientes
-              </p>
-            </div>
-            <div className="p-6 rounded-xl bg-red-50 border-2 border-red-200">
-              <div className="text-4xl mb-4">💰</div>
-              <h3 className="text-xl font-semibold mb-2">Custo Alto</h3>
-              <p className="text-gray-600">
-                Fotógrafo: R$ 500/mês + Designer: R$ 300/mês = R$ 800/mês
-              </p>
-            </div>
+            {[
+              {
+                icon: "⏰",
+                title: "10h+ Semanais",
+                description: "Tempo gasto criando posts que poderia ser usado atendendo clientes"
+              },
+              {
+                icon: "😓",
+                title: "Inconsistência",
+                description: "Algoritmo pune contas sem post regular → perde seguidores"
+              },
+              {
+                icon: "💸",
+                title: "R$ 800+/mês",
+                description: "Custo com fotógrafo + designer para conteúdo básico"
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                <div className="text-5xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Solution Section */}
-      <section id="features" className="py-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            A Solução: InstaFashion AI
-          </h2>
+      <section id="features" className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              A Solução
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Tudo automático, tudo profissional, tudo em português
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl transition">
-              <div className="text-5xl mb-4">📅</div>
-              <h3 className="text-2xl font-bold mb-4">Calendário Inteligente</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li>✅ Drag-and-drop visual</li>
-                <li>✅ Templates para personal shoppers</li>
-                <li>✅ Calendário sazonal (12/jun, etc.)</li>
-                <li>✅ Preview do feed grid</li>
-                <li>✅ IA sugere conteúdo automaticamente</li>
-              </ul>
-            </div>
-            <div className="p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl transition">
-              <div className="text-5xl mb-4">🤖</div>
-              <h3 className="text-2xl font-bold mb-4">Gerador de Imagens IA</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li>✅ Upload de roupas suas reais</li>
-                <li>✅ IA gera composições profissionais</li>
-                <li>✅ Modelos diversas (etnias, tipos)</li>
-                <li>✅ Backgrounds profissionais</li>
-                <li>✅ Gera post + story do mesmo look</li>
-              </ul>
-            </div>
-            <div className="p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl transition">
-              <div className="text-5xl mb-4">⏰</div>
-              <h3 className="text-2xl font-bold mb-4">Agendamento Automático</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li>✅ Conexão Instagram Business API</li>
-                <li>✅ Auto-publicação</li>
-                <li>✅ Zoneamento Brasil</li>
-                <li>✅ Melhores horários automáticos</li>
-                <li>✅ Posts saem sozinhos</li>
-              </ul>
-            </div>
-            <div className="p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl transition">
-              <div className="text-5xl mb-4">📊</div>
-              <h3 className="text-2xl font-bold mb-4">Analytics</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li>✅ Engajamento (likes, comments, saves)</li>
-                <li>✅ Melhores horários da SUA audiência</li>
-                <li>✅ Performance por tipo de conteúdo</li>
-                <li>✅ Growth tracking</li>
-                <li>✅ Relatórios mensais</li>
-              </ul>
-            </div>
+            {[
+              {
+                icon: "🤖",
+                title: "IA que Entende Fashion",
+                features: [
+                  "Gera captions em português brasileiro",
+                  "Sugere hashtags relevantes",
+                  "Adapta ao seu estilo pessoal"
+                ]
+              },
+              {
+                icon: "📅",
+                title: "Calendário Inteligente",
+                features: [
+                  "Sugere melhores horários",
+                  "Lembra datas importantes (Dia das Mães, Black Friday)",
+                  "Preview do feed antes de postar"
+                ]
+              },
+              {
+                icon: "🎨",
+                title: "Imagens Profissionais",
+                features: [
+                  "Upload das suas peças reais",
+                  "IA cria composições fashion",
+                  "Modelos diversos e backgrounds"
+                ]
+              },
+              {
+                icon: "⚡",
+                title: "Auto-Publicação",
+                features: [
+                  "Conexão direta com Instagram",
+                  "Posts saem sozinhos nos horários certos",
+                  "Você só aprova o conteúdo"
+                ]
+              }
+            ].map((feature, idx) => (
+              <div key={idx} className="bg-gradient-to-br from-pink-50 to-orange-50 p-8 rounded-2xl hover:shadow-lg transition">
+                <div className="text-5xl mb-4">{feature.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <ul className="space-y-3">
+                  {feature.features.map((f, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="text-pink-500 mr-2 mt-1">✓</span>
+                      <span className="text-gray-700">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 px-4 bg-white">
+      <section id="pricing" className="py-24 px-6 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">
-            Preços Simples e Transparentes
-          </h2>
-          <p className="text-center text-gray-600 mb-12">
-            Especificamente para personal shoppers brasileiras
-          </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Preço Justo
+            </h2>
+            <p className="text-xl text-gray-600">
+              Específico para mercado brasileiro
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {/* Starter */}
-            <div className="p-8 rounded-2xl bg-white shadow-lg border-2 border-gray-200">
-              <h3 className="text-xl font-bold mb-2">Starter</h3>
-              <div className="text-4xl font-bold mb-4">
-                R$ 49<small className="text-lg text-gray-500">/mês</small>
+            <div className="bg-white p-8 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Starter</h3>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-gray-900">R$ 49</span>
+                <span className="text-gray-500">/mês</span>
               </div>
-              <ul className="space-y-3 mb-6 text-gray-600">
-                <li>✓ 30 posts agendados</li>
-                <li>✓ 50 imagens IA</li>
-                <li>✓ 3 templates</li>
-                <li>✓ Analytics básico</li>
-                <li>✓ 1 conta Instagram</li>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start text-gray-600">
+                  <span className="text-pink-500 mr-2">✓</span>
+                  <span>30 posts agendados</span>
+                </li>
+                <li className="flex items-start text-gray-600">
+                  <span className="text-pink-500 mr-2">✓</span>
+                  <span>50 imagens IA</span>
+                </li>
+                <li className="flex items-start text-gray-600">
+                  <span className="text-pink-500 mr-2">✓</span>
+                  <span>3 templates</span>
+                </li>
               </ul>
               <Link
                 href="/app/onboarding"
-                className="block w-full py-3 text-center rounded-lg border-2 border-pink-500 text-pink-600 font-semibold hover:bg-pink-50 transition"
+                className="block w-full text-center py-3 rounded-full border-2 border-gray-200 text-gray-700 font-semibold hover:border-gray-300 transition"
               >
-                Começar Grátis
+                Começar
               </Link>
             </div>
 
-            {/* Pro */}
-            <div className="p-8 rounded-2xl shadow-lg transform md:scale-105 bg-instagram-gradient text-white">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-xl font-bold">Pro</h3>
-                <span className="bg-white text-pink-600 text-xs px-2 py-1 rounded">
-                  POPULAR
+            {/* Pro - Featured */}
+            <div className="bg-gradient-to-br from-pink-500 via-orange-500 to-purple-600 p-8 rounded-2xl shadow-xl transform md:-translate-y-4">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="text-lg font-semibold text-white">Pro</h3>
+                <span className="bg-white/20 text-white text-xs px-3 py-1 rounded-full">
+                  Popular
                 </span>
               </div>
-              <div className="text-4xl font-bold mb-4">
-                R$ 99<small className="text-lg opacity-80">/mês</small>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-white">R$ 99</span>
+                <span className="text-white/80">/mês</span>
               </div>
-              <ul className="space-y-3 mb-6">
-                <li>✓ Posts ilimitados</li>
-                <li>✓ 200 imagens IA</li>
-                <li>✓ Todos os templates</li>
-                <li>✓ Analytics avançado</li>
-                <li>✓ 3 contas Instagram</li>
-                <li>✓ Brand kit customizável</li>
+              <ul className="space-y-3 mb-8 text-white">
+                <li className="flex items-start">
+                  <span className="mr-2">✓</span>
+                  <span>Posts ilimitados</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✓</span>
+                  <span>200 imagens IA</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✓</span>
+                  <span>Todos os templates</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✓</span>
+                  <span>3 contas Instagram</span>
+                </li>
               </ul>
               <Link
                 href="/app/onboarding"
-                className="block w-full py-3 text-center rounded-lg bg-white text-pink-600 font-semibold hover:bg-gray-100 transition"
+                className="block w-full text-center py-3 rounded-full bg-white text-pink-600 font-semibold hover:bg-gray-50 transition"
               >
                 Começar Agora
               </Link>
             </div>
 
             {/* Premium */}
-            <div className="p-8 rounded-2xl bg-white shadow-lg border-2 border-gray-200">
-              <h3 className="text-xl font-bold mb-2">Premium</h3>
-              <div className="text-4xl font-bold mb-4">
-                R$ 199<small className="text-lg text-gray-500">/mês</small>
+            <div className="bg-white p-8 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Premium</h3>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-gray-900">R$ 199</span>
+                <span className="text-gray-500">/mês</span>
               </div>
-              <ul className="space-y-3 mb-6 text-gray-600">
-                <li>✓ Tudo do Pro +</li>
-                <li>✓ Imagens IA ilimitadas</li>
-                <li>✓ 10 contas Instagram</li>
-                <li>✓ IA personalizada</li>
-                <li>✓ Suporte VIP (WhatsApp)</li>
-                <li>✓ Whitelabel</li>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start text-gray-600">
+                  <span className="text-pink-500 mr-2">✓</span>
+                  <span>Tudo do Pro +</span>
+                </li>
+                <li className="flex items-start text-gray-600">
+                  <span className="text-pink-500 mr-2">✓</span>
+                  <span>Imagens IA ilimitadas</span>
+                </li>
+                <li className="flex items-start text-gray-600">
+                  <span className="text-pink-500 mr-2">✓</span>
+                  <span>Suporte WhatsApp</span>
+                </li>
               </ul>
               <Link
                 href="/app/onboarding"
-                className="block w-full py-3 text-center rounded-lg border-2 border-pink-500 text-pink-600 font-semibold hover:bg-pink-50 transition"
+                className="block w-full text-center py-3 rounded-full border-2 border-gray-200 text-gray-700 font-semibold hover:border-gray-300 transition"
               >
                 Fale Conosco
               </Link>
@@ -236,50 +302,55 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Mercado Enorme, Zero Concorrência
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+      <section className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-12 text-center">
             <div>
               <div className="text-5xl font-bold text-pink-600 mb-2">141M</div>
-              <p className="text-gray-600">Usuários Instagram Brasil</p>
+              <p className="text-gray-600">Usuários Instagram no Brasil</p>
             </div>
             <div>
-              <div className="text-5xl font-bold text-pink-600 mb-2">95%</div>
+              <div className="text-5xl font-bold text-orange-600 mb-2">95%</div>
               <p className="text-gray-600">E-commerces usam Instagram</p>
             </div>
             <div>
-              <div className="text-5xl font-bold text-pink-600 mb-2">R$ 99</div>
-              <p className="text-gray-600">Preço médio (vs R$ 500+ concorrentes)</p>
+              <div className="text-5xl font-bold text-purple-600 mb-2">10h</div>
+              <p className="text-gray-600">Economizadas por semana</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-instagram-gradient text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Pronta para Economizar 10h/Semana?
+      <section className="py-24 px-6 bg-gradient-to-br from-pink-500 via-orange-500 to-purple-600">
+        <div className="max-w-3xl mx-auto text-center text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Pronta para Automatizar?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Junte-se à waitlist e seja das primeiras a testar
+          <p className="text-xl mb-10 text-white/90">
+            Junte-se às personal shoppers que já estão economizando 10h+ por semana
           </p>
           <Link
             href="/app/onboarding"
-            className="inline-block bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition"
+            className="inline-block bg-white text-pink-600 px-10 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition"
           >
-            Quero Testar Grátis
+            Começar Teste Grátis
           </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 text-center text-gray-600 border-t bg-white">
-        <p>© 2026 InstaFashion AI - Feito com ❤️ para Personal Shoppers Brasileiras</p>
-        <p className="text-sm mt-2">São Paulo, Brasil - R$ 49-199/mês - Trial Grátis 14 Dias</p>
+      <footer className="py-12 px-6 bg-gray-900 text-gray-400">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 via-orange-500 to-purple-600 flex items-center justify-center">
+              <span className="text-white text-xl">✨</span>
+            </div>
+            <span className="text-xl font-bold text-white">InstaFashion</span>
+          </div>
+          <p className="mb-4">Feito com ❤️ para Personal Shoppers Brasileiras</p>
+          <p className="text-sm">© 2026 InstaFashion. Todos os direitos reservados.</p>
+        </div>
       </footer>
     </main>
   )
