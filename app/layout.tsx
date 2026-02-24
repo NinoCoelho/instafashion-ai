@@ -9,23 +9,6 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'InstaFashion AI - Calendário Instagram + IA para Personal Shoppers',
   description: 'Economize 10h/semana criando conteúdo. Gerencie posts, agende automaticamente, e cresça seus seguidores com calendário inteligente + IA.',
-  manifest: '/manifest.json',
-  themeColor: '#f09433',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'InstaFashion AI',
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
-  icons: {
-    icon: '/icon-192.png',
-    apple: '/apple-icon.png',
-  },
 }
 
 export default function RootLayout({
@@ -36,11 +19,14 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="theme-color" content="#f09433" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="InstaFashion" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>
