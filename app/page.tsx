@@ -7,7 +7,7 @@ export default function Home() {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 via-orange-500 to-purple-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl gradient-pink-orange-purple flex items-center justify-center">
               <span className="text-white text-xl">✨</span>
             </div>
             <span className="text-xl font-bold text-gray-900">
@@ -23,7 +23,7 @@ export default function Home() {
             </Link>
             <Link
               href="/app/onboarding"
-              className="bg-gradient-to-r from-pink-500 via-orange-500 to-purple-600 text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:shadow-pink-500/25 transition-all"
+              className="gradient-pink-orange-purple text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:shadow-pink-500/25 transition-all"
             >
               Começar Grátis
             </Link>
@@ -42,7 +42,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
             Seu Instagram
             <br />
-            <span className="bg-gradient-to-r from-pink-500 via-orange-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="gradient-pink-orange-purple bg-clip-text text-transparent">
               no Autopilot
             </span>
           </h1>
@@ -54,7 +54,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/app/onboarding"
-              className="group bg-gradient-to-r from-pink-500 via-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-pink-500/25 transition-all flex items-center justify-center"
+              className="group gradient-pink-orange-purple text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-pink-500/25 transition-all flex items-center justify-center"
             >
               Começar Agora
               <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
@@ -232,7 +232,7 @@ export default function Home() {
             </div>
 
             {/* Pro - Featured */}
-            <div className="bg-gradient-to-br from-pink-500 via-orange-500 to-purple-600 p-8 rounded-2xl shadow-xl transform md:-translate-y-4">
+            <div className="gradient-pink-orange-purple p-8 rounded-2xl shadow-xl transform md:-translate-y-4">
               <div className="flex justify-between items-center mb-2">
                 <h3 className="text-lg font-semibold text-white">Pro</h3>
                 <span className="bg-white/20 text-white text-xs px-3 py-1 rounded-full">
@@ -322,7 +322,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-pink-500 via-orange-500 to-purple-600">
+      <section className="py-24 px-6 gradient-pink-orange-purple">
         <div className="max-w-3xl mx-auto text-center text-white">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Pronta para Automatizar?
@@ -343,7 +343,7 @@ export default function Home() {
       <footer className="py-12 px-6 bg-gray-900 text-gray-400">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 via-orange-500 to-purple-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl gradient-pink-orange-purple flex items-center justify-center">
               <span className="text-white text-xl">✨</span>
             </div>
             <span className="text-xl font-bold text-white">InstaFashion</span>

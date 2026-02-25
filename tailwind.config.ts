@@ -6,14 +6,24 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
-    extend: {
-      colors: {
-        instagram: {
-          gradient: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
-        }
-      },
+  safelist: [
+    {
+      pattern: /from-(pink|orange|purple)-500/,
+      variants: ['bg-gradient-to-r', 'bg-gradient-to-br', 'bg-gradient-to-b'],
     },
+    {
+      pattern: /via-(orange|pink)-500/,
+      variants: ['bg-gradient-to-r', 'bg-gradient-to-br'],
+    },
+    {
+      pattern: /to-(purple|orange|pink)-600/,
+      variants: ['bg-gradient-to-r', 'bg-gradient-to-br'],
+    },
+    'bg-clip-text',
+    'text-transparent',
+  ],
+  theme: {
+    extend: {},
   },
   plugins: [],
 }
